@@ -26,6 +26,16 @@ public class Jugador {
     @JoinColumn(name = "idEquipo")
     private Equipo idEquipo;
 
+    public Jugador(String nombre, Float estatura, Float peso) {
+        this.nombre = nombre;
+        this.estatura = estatura;
+        this.peso = peso;
+    }
+
+    public Jugador() {
+
+    }
+
     public Integer getId() {
         return id;
     }
@@ -66,4 +76,12 @@ public class Jugador {
         this.idEquipo = idEquipo;
     }
 
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "nombre='" + nombre + '\'' +
+                ", estatura=" + estatura +
+                ", peso=" + peso +
+                '}';
+    }
 }
